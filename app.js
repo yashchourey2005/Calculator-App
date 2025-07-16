@@ -2,9 +2,11 @@ let boxes = document.querySelectorAll(".single-box");
 let inputBox = document.querySelector("#input-text");
 
 for(let box of boxes){
+    
     box.addEventListener("click", ()=>{
         console.log("btn clicked");
         console.dir(box)
+        changeColor(box);
         // inputBox.value += box.innerText;
 
         if(box.innerText === "="){
@@ -23,6 +25,13 @@ for(let box of boxes){
         }
 
     })
+}
+
+function changeColor(box){
+    box.classList.add("color-change");
+    setTimeout(()=>{
+        box.classList.remove("color-change");
+    },200);
 }
 
 function calculate(value){
