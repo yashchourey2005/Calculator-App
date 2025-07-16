@@ -11,8 +11,9 @@ h1{
 
 .container{
     background-color: rgb(255, 255, 255, 0.3);
-    width: 50vh;
-    height: 80vh;
+    max-width: 500px;
+    width: 90%;
+    min-height: 80vh;
     margin: auto;
     display: flex;
     flex-direction: column;
